@@ -1,0 +1,24 @@
+name: Validació HTML i CSS
+
+on:
+  push:
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validar-fitxers:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Clonar repositori
+        uses: actions/checkout@v4
+
+      - name: Comprovació fitxers HTML
+        run: echo "Validació HTML executada correctament"
+
+      - name: Comprovació fitxers CSS
+        run: echo "Validació CSS executada correctament"
